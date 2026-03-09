@@ -1,0 +1,8 @@
+{
+  title(id: "tt0120338") {
+    ratingsSummary {
+      aggregateRating
+      voteCount
+    }
+  }
+}
