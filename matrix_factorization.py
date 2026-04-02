@@ -1,6 +1,9 @@
 import numpy as np
 import pandas as pd
 
+
+VERBOSE = True
+
 #Load ratings from data set
 ratings = pd.read_csv(
     'data/u.data',
@@ -18,9 +21,10 @@ movies = pd.read_csv(
 )
 
 #Print ratings information
-print(f'Ratings loaded:  {len(ratings):,} rows')
-print(f'Unique users:    {ratings.user_id.nunique()}')
-print(f'Unique movies:   {ratings.item_id.nunique()}')
-print(f'Rating range:    {ratings.rating.min()} – {ratings.rating.max()}')
-print()
-ratings.head(10)
+if(VERBOSE == True):
+    print(f'Ratings loaded:  {len(ratings):,} rows')
+    print(f'Unique users:    {ratings.user_id.nunique()}')
+    print(f'Unique movies:   {ratings.item_id.nunique()}')
+    print(f'Rating range:    {ratings.rating.min()} – {ratings.rating.max()}')
+    print(ratings.head(10))
+    
